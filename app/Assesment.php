@@ -18,7 +18,7 @@ class Assesment extends Model
 
     public function grade()
     {
-        return $this->hasOne('App\Grade', 'foreign_key');
+        return $this->hasOne('App\Grade', 'grade_id');
     }
 }
 
