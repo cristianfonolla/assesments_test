@@ -25,6 +25,10 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(\App\Repositories\AssesmentsRepository::class, 
             \App\Repositories\AssesmentsRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\GradeRepository::class, 
+            \App\Repositories\GradeRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\ScaleRepository::class, 
+            \App\Repositories\ScaleRepositoryEloquent::class);
         //:end-bindings:
     }
 }
