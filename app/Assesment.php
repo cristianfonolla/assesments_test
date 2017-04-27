@@ -15,6 +15,11 @@ class Assesment extends Model
         'weight',
         'parent_grade',
     ];
+
+    public function grade()
+    {
+        return $this->hasOne('App\Grade', 'foreign_key');
+    }
 }
 
 
