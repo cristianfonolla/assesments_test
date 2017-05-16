@@ -26,5 +26,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('scales', 'ScalesController');
 
+
+
+    Route::resource('assesment/pdf', 'PdfController@assesment');
+
+
+    Route::resource('assesment/pdfs', 'PdfController@assesments');
+
 });
 
