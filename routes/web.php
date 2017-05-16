@@ -24,4 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
     Route::get('Assesment', 'AssesmentController@index')->name('Assesment');
 
+    Route::resource('scales', 'ScalesController');
+
 });
+

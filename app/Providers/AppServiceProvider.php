@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\ScaleRepository;
+use App\Repositories\ScaleRepositoryEloquent;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Dusk\DuskServiceProvider;
 
@@ -14,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(ScaleRepository::class,
+            ScaleRepositoryEloquent::class);
     }
 
     /**
